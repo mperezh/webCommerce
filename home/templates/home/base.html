@@ -9,6 +9,7 @@
   {% load staticfiles %}
   <!-- LINKS -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css '%}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.min.css '%}">
   <link rel="stylesheet" href="{% static 'css/hover.min.css '%}">
   <link rel="stylesheet" href="{% static 'css/style.css '%}">
@@ -37,11 +38,16 @@
         <!-- navbar-collapse -->
         <div class="collapse navbar-collapse" id="navbar-menu">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-            <li><a href="#">Item 5</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Buscar</a></li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Iniciar Sesion</a></li>
+                <li><a href="#">Registrate</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
           <!-- ./ end navbar-collapse -->
@@ -54,8 +60,19 @@
 
   {% block content %}{% endblock %}
 
+  <section id="footer">
+    <div class="footer-content">
+      <h1>webCommerce</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam tempora, vel aspernatur distinctio in, impedit quam, eum, corporis culpa ratione sequi quod dicta placeat quis.</p>
+    </div>
+    <div class="footer-copyright">
+      Copyright © webCommerce 2016. Todos los derechos reservados. Creado por webCommerce Developers
+    </div>
+  </section>
   <!-- SCRIPTS -->
   <script src="{% static 'js/bootstrap.min.js '%}"></script>
   <script src="{% static 'js/wow.min.js '%}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/main.js '%}"></script>
 </body>
 </html>

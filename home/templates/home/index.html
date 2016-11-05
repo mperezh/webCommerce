@@ -1,7 +1,156 @@
 {% extends 'home/base.html' %}
-
+{% load staticfiles %}
 {% block content%}
+<div class="jumbotron">
+  <div class="container bg-overlay">
+    <h1>webCommerce</h1>
+    <p>La mejor app</p>
+    <p><a href="" class="btn btn-primary btn-lg hvr-sweep-to-right" role="button">Registrate</a></p>
+  </div>
+</div>
+
 <div class="container">
   <h1>Hello World.</h1>
+  <div class="row">
+    <!-- Thumbnail 1 -->
+    <div class="col-sm-12 col-lg-4">
+      <div class="thumbnail">
+        <img src="" alt="">
+        <div class="caption">
+          <h3>Confiabilidad</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, debitis.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ./ end Thumbnail 1 -->
+    <!-- Thumbnail 2 -->
+    <div class="col-sm-12 col-lg-4">
+      <div class="thumbnail">
+        <img src="" alt="">
+        <div class="caption">
+          <h3>Seguridad</h3>
+          <p>Doloribus hic eaque, quae illum sapiente dignissimos pariatur, fugiat ipsa.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ./ end Thumbnail 2 -->
+    <!-- Thumbnail 3 -->
+    <div class="col-xs-12 col-lg-4">
+      <div class="thumbnail">
+        <img src="" alt="">
+        <div class="caption">
+          <h3>Atencion 24/7</h3>
+          <p>Tempora quas est error commodi, aut incidunt amet reiciendis obcaecati.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ./ end Thumbnail 3 -->
+  </div>
+  <!-- ./ end Row -->
+  <!-- #Clients -->
+  <section id="clients">
+    <h2>Nuestros Clientes</h2>
+    <!-- Row -->
+    <div class="row">
+      <div class="container">
+        <div class="col-xs-12 col-md-4">
+          <a href="http://www.burgerking.es/"><img class="img-responsive" src="{% static 'img/clientes/burgerking.png' %}" alt="Burger King" /></a>
+        </div>
+        <div class="col-xs-12 col-md-4 pq-img">
+          <a href="http://bonsaisushi.net.ve/web/"><img class="img-responsive" src="{% static 'img/clientes/sushi.png' %}" alt="Bonsai Sushi" /></a>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <a href="http://www.pizzahut.net.ve/"><img class="img-responsive" src="{% static 'img/clientes/pizzahut.png' %}" alt="Pizza Hut" /></a>
+        </div>
+      </div>
+      <!-- ./ end Container -->
+    </div>
+    <!-- ./ end Row -->
+  </section>
+  <!-- ./ end #Clients -->
+  <!-- #Testimonials -->
+  <section id="testimonials">
+    <h2>Testimonios</h2>
+
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <div class="item">
+        <h5>John Doe</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam, cupiditate ex eveniet eius dolores at. Nobis, labore. Molestias beatae quis magnam voluptate, impedit sapiente mollitia ut fuga distinctio. Animi.</p>
+      </div>
+      <div class="item">
+        <h5>John Doe</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam, cupiditate ex eveniet eius dolores at. Nobis, labore. Molestias beatae quis magnam voluptate, impedit sapiente mollitia ut fuga distinctio. Animi.</p>
+      </div>
+      <div class="item">
+        <h5>John Doe</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam, cupiditate ex eveniet eius dolores at. Nobis, labore. Molestias beatae quis magnam voluptate, impedit sapiente mollitia ut fuga distinctio. Animi.</p>
+      </div>
+      <div class="item">
+        <h5>John Doe</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam, cupiditate ex eveniet eius dolores at. Nobis, labore. Molestias beatae quis magnam voluptate, impedit sapiente mollitia ut fuga distinctio. Animi.</p>
+      </div>
+      <div class="item">
+        <h5>John Doe</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam, cupiditate ex eveniet eius dolores at. Nobis, labore. Molestias beatae quis magnam voluptate, impedit sapiente mollitia ut fuga distinctio. Animi.</p>
+      </div>
+    </div>
+    <div class="customNavigation">
+      <a class="prev">left</a>
+      <a class="next">right</a>
+    </div>
+  </section>
+  <!-- ./ end #Testimonials -->
+</div>
+<!-- ./ end Container -->
+<!-- Parallax -->
+<section class="parallax">
+  <div class="text-center">
+    <h2>We create special memories</h2>
+    <div class="page-break"></div>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</section>
+<!-- ./ end Parallax -->
+<!-- Container -->
+<div class="container">
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Habla con nosotros!</h2>
+    <p>Rellena la información a continuación para ponerte en contacto con nosotros.</p>
+    <div class="container-fluid">
+      <div class="row">
+       <div class="col-md-6 col-sm-6 col-xs-12">
+        <form method="post">
+         <div class="form-group ">
+          <label class="control-label " for="name">
+           Name
+          </label>
+          <input class="form-control" id="name" name="name" type="text"/>
+         </div>
+         <div class="form-group ">
+          <label class="control-label " for="subject">
+           Subject
+          </label>
+          <input class="form-control" id="subject" name="subject" type="text"/>
+         </div>
+         <div class="form-group ">
+          <label class="control-label " for="message">
+           Message
+          </label>
+          <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+         </div>
+         <div class="form-group">
+          <div>
+           <button class="btn btn-primary " name="submit" type="submit">
+            Submit
+           </button>
+          </div>
+         </div>
+        </form>
+       </div>
+      </div>
+     </div>
+  </section>
+  <!-- ./ end Contact -->
 </div>
 {% endblock %}

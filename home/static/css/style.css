@@ -9,16 +9,24 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
 
+section {
+  margin-top: 5em;
+}
+.pq-img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /******************** Navbar ********************/
 .navbar {
   border: 0;
   border-radius: 0;
+  margin-bottom: 0;
 }
 .navbar-default {
-  background-color: #E32929;
+  background-color: #455A64; /*#E32929;*/
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: transparent;
@@ -33,17 +41,94 @@
   background-color: #FFF;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #FFB80E;
+  background-color: #00BCD4; /*#FFB80E*/
 }
 .navbar-default .navbar-nav>li>a {
   color: #FFF;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-  color: #FFB80E;
+  color: #00BCD4; /*#FFB80E*/
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #FFF;
+  background-color: #00BCD4;
+}
+/******************** Jumbotron ********************/
+.jumbotron {
+  background-image: url('../img/bg-home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 50vh;
+  text-align: center;
+  color: #03A9F4;
+}
+
+.jumbotron .bg-overlay {
+  position: relative;
+  /*background: rgba(0,0,0,.5);*/
+  width: 100%;
+}
+.jumbotron .btn {
+  border: 3px solid #00BCD4;
+  border-radius: 0;
+  background: transparent;
+  color: #000;
+}
+
+/******************** #Clients ********************/
+#clients img {
+  max-width: 300px;
+  justify-content: center;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+#clients img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+#clients .img-responsive {
+  margin: 0 auto;
+}
+
+/******************** Parallax ********************/
+.parallax {
+  padding: 0px;
+  margin-bottom: 0px;
+  color: rgb(255, 255, 255);
+  background: url('../img/bg-parallax.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.parallax h2 {
+  font-size: 3em;
+}
+.parallax p {
+  font-size: 1.5em;
+}
+
+/******************** Footer ********************/
+#footer {
+  text-align: center;
+}
+.footer-content {
+  background-color: #455A64;
+  color: #FFF;
+  padding: 30px;
+}
+.footer-copyright {
+  background-color: #2B383E;
+  color: #FFF;
+  font-weight: bold;
 }
 
 /******************** Responsive design ********************/
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 765px) {
   .navbar-brand {
     transform: translateX(-50%);
     left: 50%;
@@ -57,5 +142,12 @@
     margin-left: 15px;
     border: 0;
     border-radius: none;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #FFF;
+  }
+  .jumbotron {
+    height: 92vh;
+    background-size: auto;
   }
 }
