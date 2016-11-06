@@ -1,6 +1,6 @@
 /*
 * Paleta de colores
-* http://www.color-hex.com/color-palette/15880
+* https://www.materialpalette.com/blue-grey/cyan
 */
 
 * {
@@ -10,9 +10,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/*body {
+  background-color: #EEE;
+}*/
 section {
   margin-top: 5em;
+}
+section h2 {
+  padding-bottom: 1em;
+  text-align: center;
 }
 .pq-img {
   display: inline-block;
@@ -53,6 +59,18 @@ section {
   color: #FFF;
   background-color: #00BCD4;
 }
+
+/******************** Stats ********************/
+#stats img {
+  max-width: 300px;
+}
+#stats .thumbnail h3 {
+  text-align: center;
+}
+#stats .thumbnail p {
+  text-align: justify;
+}
+
 /******************** Jumbotron ********************/
 .jumbotron {
   background-image: url('../img/bg-home.jpg');
@@ -92,9 +110,47 @@ section {
   margin: 0 auto;
 }
 
+/******************** Testimonials ********************/
+#testimonials {
+  background-color: #607D8B;
+}
+#testimonials .item {
+  border: 3px solid #455A64;
+  border-radius: 3px;
+  margin: 2px;
+}
+#testimonials .item h5 {
+  font-style: italic;
+  text-align: center;
+}
+#testimonials .item-overlay {
+  background-color: rgba(255,255,255,.3);
+  padding: 5px;
+}
+#testimonials .customNavigation {
+  text-align: center;
+  padding: 15px;
+}
+#testimonials .prev, .next {
+  border: 3px solid #455A64;
+  background-color: #607D8B;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 1.42;
+  color: #FFF;
+  border-radius: 2px;
+}
+#testimonials .prev:hover, .next:hover {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /******************** Parallax ********************/
 .parallax {
   padding: 0px;
+  margin-top: 0;
   margin-bottom: 0px;
   color: rgb(255, 255, 255);
   background: url('../img/bg-parallax.jpg') no-repeat center center fixed;
@@ -110,6 +166,19 @@ section {
 }
 .parallax p {
   font-size: 1.5em;
+}
+
+/******************** Contact ********************/
+#contact .form-control {
+  border: 3px solid #2B383E;
+  background-color: #455A64;
+  border-radius: 0;
+  color: #FFF;
+}
+#contact .btn {
+  border: 1px solid #2B383E;
+  background-color: #455A64;
+  border-radius: 0;
 }
 
 /******************** Footer ********************/
