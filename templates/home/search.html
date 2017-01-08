@@ -1,0 +1,48 @@
+{% extends '../base.html' %}
+{% load staticfiles %}
+
+{% block title %} | Buscar{% endblock %}
+
+{% block content %}
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Encuentra otros usuarios</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search">
+        <div class="container">
+            <div class="row">
+            <div class="container">
+                <form action="." method="GET" class="text-center">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Busca por usuario o nombre.." name="q"
+                               value="{{ query|escape }}">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg orange" style="margin: 1em;">Buscar</button>
+                </form>
+                {% if query %}
+                <h4>Resultados para "{{ query|escape }}"</h4>
+                <div class="container">
+                    {% if results %}
+                        <ul>
+                        {% for user in results %}
+                            <li>{{ user|escape }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No se econtraron usuarios</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+            </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends '../base.html' %}
+{% load staticfiles %}
+{% load bootstrap %}
+{% block title %}Registrate{% endblock %}
+
+{% block content %}
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Unete a nosotros!</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration">
+        <div class="container">
+            <div class="row">
+                <h4>Registrate y forma parte de nuestra comunidad</h4>
+                <br>
+                <div class="container">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form|bootstrap_horizontal }}
+                        <button type="submit" class="btn btn-primary btn-lg orange">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
